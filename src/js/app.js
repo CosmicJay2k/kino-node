@@ -31,12 +31,11 @@ app.get("/movies", async (req, res) => {
 });
 
 app.get("/:movieId", async (req, res) => {
-  try {
-    const movie = await fetchMovie(req.params.movieId);
+  const movie = await fetchMovie(req.params.movieId);
+  if (movie) {
     res.render("movie", { movie });
-    console.log(movie.attributes.intro);
-  } catch (err) {
-    console.log(err);
+  } else {
+    res.status(404).render("404");
   }
 });
 
