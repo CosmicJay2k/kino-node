@@ -1,15 +1,18 @@
 header {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .header-logo-container {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   margin: 35px auto;
 }
 
 .menu-container {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   height: 25px;
   padding-top: 1px;
   background-color: #e8b1b0;
@@ -62,13 +65,15 @@ header {
 
 .hero-ad-container {
   margin-top: 20px;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   height: 200px;
   background-color: rgba(219, 219, 219, 0.5);
 }
 
 main {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   height: auto;
   margin: 17px auto;
   display: flex;
@@ -77,36 +82,72 @@ main {
 }
 
 .main-container {
-  order: 2;
-  width: 575px;
+  order: 1;
+  width: 100%;
+  max-width: 575px;
 }
 .main-container img:hover {
   opacity: 0.7;
+}
+@media screen and (max-width: 1100px) {
+  .main-container {
+    max-width: 100%;
+  }
+  .main-container img {
+    object-fit: contain;
+    width: 100%;
+  }
 }
 
 .main-container-content-article-small {
   margin-bottom: 13px;
   width: 575px;
 }
+@media screen and (max-width: 900px) {
+  .main-container-content-article-small {
+    width: 100%;
+  }
+}
 
 .main-container-content-article-large {
   margin-bottom: 13px;
   width: 575px;
+}
+@media screen and (max-width: 900px) {
+  .main-container-content-article-large {
+    width: 100%;
+  }
 }
 
 .main-container-content-movie-comingsoon {
   margin-bottom: 13px;
   width: 575px;
 }
+@media screen and (max-width: 900px) {
+  .main-container-content-movie-comingsoon {
+    width: 100%;
+  }
+}
 
 .main-container-content-movie-availablenow {
   margin-bottom: 13px;
   width: 575px;
 }
+@media screen and (max-width: 900px) {
+  .main-container-content-movie-availablenow {
+    width: 100%;
+  }
+}
 
 .right-container {
   order: 3;
-  width: 315px;
+  width: 100%;
+  max-width: 315px;
+}
+@media screen and (max-width: 1100px) {
+  .right-container {
+    display: none;
+  }
 }
 
 .right-container-content-article-small {
@@ -120,7 +161,7 @@ main {
   height: 33px;
 }
 
-.right-container-content-calender {
+.right-container-content-calendar {
   margin-bottom: 13px;
   width: 315px;
   height: 540px;
@@ -142,10 +183,20 @@ footer p {
   margin-bottom: 30px;
 }
 
+.bingo {
+  margin: 0;
+  list-style-type: none;
+}
+.bingo a {
+  text-decoration: none;
+  color: white;
+  display: inline-table;
+}
+
 body {
   margin: 0;
   background-color: #261a4e;
-  background-image: url("/src/img/FW-edges-half-purple.jpg");
+  background-image: url("../img/FW-edges-half-purple.jpg");
   background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
 }
