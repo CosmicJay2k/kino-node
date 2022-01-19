@@ -9,7 +9,10 @@ app.set("views", "./views");
 
 app.get("/", (req, res) => {
   res.render("home");
-  console.log(req.path);
+});
+
+app.get("/movies", (req, res) => {
+  res.render("movies");
 });
 
 app.use(express.static("./"));
