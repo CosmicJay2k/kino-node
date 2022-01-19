@@ -4,7 +4,7 @@
   </div>
   <div class="main-container-content-movie-availablenow">
     <h2>{{movie.attributes.title}}</h2>
-    <p>{{movie.attributes.intro}}</p>
+    {{#markdown movie.attributes.intro}}{{/markdown}}
     <img src="{{movie.attributes.image.url}}" />
   </div>
 </div>

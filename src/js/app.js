@@ -1,11 +1,18 @@
 import express from "express";
 import { engine } from "express-handlebars";
 import { fetchMovies, fetchMovie } from "./modules/fetchData.js";
-import __dirname from "express";
+import { marked } from "marked";
 
 const app = express();
 
-app.engine("handlebars", engine());
+app.engine(
+  "handlebars",
+  engine({
+    helpers: {
+      markdown: (md) => marked(md),
+    },
+  })
+);
 app.set("view engine", "handlebars");
 app.set("views", "./views");
 
@@ -27,7 +34,7 @@ app.get("/:movieId", async (req, res) => {
   try {
     const movie = await fetchMovie(req.params.movieId);
     res.render("movie", { movie });
-    console.log(movie);
+    console.log(movie.attributes.intro);
   } catch (err) {
     console.log(err);
   }
