@@ -1,0 +1,31 @@
+{
+  "name": "kino-node",
+  "version": "1.0.0",
+  "description": "Using SSR to serve Kino Lulea",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "handlebars": "^4.7.7",
+    "sass": "^1.45.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CosmicJay2k/kino-node.git"
+  },
+  "author": "John Tannenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CosmicJay2k/kino-node/issues"
+  },
+  "homepage": "https://github.com/CosmicJay2k/kino-node#readme"
+}
