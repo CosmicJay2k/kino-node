@@ -50,9 +50,11 @@
     <div class="main-container-content-article-small">
       <a href="#"><img src="/src/img/mainContent/visasNu.jpg" /></a>
     </div>
-    <div class="main-container-content-movie-availablenow">
-      <a href="#"><img src="/src/img/mainContent/inIDimman.jpg" /></a>
-    </div>
+    {{#each movies}}
+      <div class="main-container-content-movie-availablenow">
+        <a href="{{id}}"><h2>{{attributes.title}}</h2></a>
+      </div>
+    {{/each}}
   </div>
 
   <!-- Right sidebar -->
