@@ -25,11 +25,11 @@ app.get("/movies", async (req, res) => {
   if (movies) {
     res.render("movies", { movies });
   } else {
-    res.status(404).render("list404");
+    res.status(404).render("movies404");
   }
 });
 
-app.get("/:movieId", async (req, res) => {
+app.get("/movies/:movieId", async (req, res) => {
   const movie = await fetchMovie(req.params.movieId);
   if (movie) {
     res.render("movie", { movie });
@@ -38,6 +38,6 @@ app.get("/:movieId", async (req, res) => {
   }
 });
 
-app.use(express.static("./"));
+app.use("/src", express.static("./src"));
 
 export default app;

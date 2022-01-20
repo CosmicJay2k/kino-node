@@ -12,7 +12,7 @@ test("show movies page with movies when requested", async () => {
 });
 
 test("show right name for movie on that movies page", async () => {
-  const response = await request(app).get("/2").expect(200);
+  const response = await request(app).get("/movies/2").expect(200);
 
   expect(response.text.includes("Godfather")).toBeTruthy();
 });
