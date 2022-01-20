@@ -40,4 +40,7 @@ app.get("/movies/:movieId", async (req, res) => {
 
 app.use("/src", express.static("./src"));
 
+app.get("/*", (req, res) => {
+  res.status(404).render("404");
+});
 export default app;
