@@ -21,12 +21,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/movies", async (req, res) => {
-  try {
-    const movies = await fetchMovies();
+  const movies = await fetchMovies();
+  if (movies) {
     res.render("movies", { movies });
-    //console.log(movies);
-  } catch (err) {
-    console.log(err);
+  } else {
+    res.status(404).render("list404");
   }
 });
 
@@ -35,7 +34,7 @@ app.get("/:movieId", async (req, res) => {
   if (movie) {
     res.render("movie", { movie });
   } else {
-    res.status(404).render("404");
+    res.status(404).render("movie404");
   }
 });
 
