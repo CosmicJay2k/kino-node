@@ -2,9 +2,11 @@
   <div class="main-container-content-article-small">
     <a href="#"><img src="/src/img/mainContent/visasNu.jpg" /></a>
   </div>
-  <div class="main-container-content-movie-availablenow">
-    <h2>{{movie.attributes.title}}</h2>
-    {{#markdown movie.attributes.intro}}{{/markdown}}
-    <img src="{{movie.attributes.image.url}}" />
+  <div class="main-container-content-movie-availablenow container-single-movie">
+    <h2 class="movie-title">{{movie.attributes.title}}</h2>
+    <div class="movie-intro">{{#markdown
+        movie.attributes.intro
+      }}{{/markdown}}</div>
+    <img class="movie-poster" src="{{movie.attributes.image.url}}" />
   </div>
 </div>

@@ -2,11 +2,12 @@
 @import "./mainContent";
 @import "./rightContent";
 @import "./footer";
+@import "./movie";
 
 body {
-    margin: 0;
-    background-color: #261a4e;
-    background-image: url("../img/FW-edges-half-purple.jpg");
-    background-size: cover;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  background-color: #261a4e;
+  background-image: url("../img/FW-edges-half-purple.jpg");
+  background-size: cover;
+  font-family: "Source Sans Pro", sans-serif;
 }

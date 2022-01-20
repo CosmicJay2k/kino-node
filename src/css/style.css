@@ -193,6 +193,28 @@ footer p {
   display: inline-table;
 }
 
+.container-single-movie {
+  background-color: #fff;
+}
+
+.movie-title {
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.movie-intro {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.6rem;
+}
+
+.movie-poster {
+  max-width: 575px;
+  width: 100%;
+}
+
 body {
   margin: 0;
   background-color: #261a4e;
