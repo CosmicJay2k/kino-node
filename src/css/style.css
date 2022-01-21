@@ -193,6 +193,11 @@ footer p {
   display: inline-table;
 }
 
+.movies-link {
+  color: #000;
+  text-decoration: none;
+}
+
 .container-single-movie {
   background-color: #fff;
 }
