@@ -217,9 +217,7 @@ footer p {
 
 body {
   margin: 0;
-  background-color: #261a4e;
-  background-image: url("../img/FW-edges-half-purple.jpg");
-  background-size: cover;
+  background: linear-gradient(347deg, #00a4ca 0%, #ffc758 19%, #00b6a2 100%);
   font-family: "Source Sans Pro", sans-serif;
 }
 

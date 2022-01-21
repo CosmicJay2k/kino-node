@@ -6,8 +6,14 @@
 
 body {
   margin: 0;
-  background-color: #261a4e;
-  background-image: url("../img/FW-edges-half-purple.jpg");
-  background-size: cover;
+  //background-color: #261a4e;
+  //background-image: url("../img/FW-edges-half-purple.jpg");
+  //background-size: cover;
+  background: linear-gradient(
+    347deg,
+    rgba(0, 164, 202, 1) 0%,
+    rgba(255, 199, 88, 1) 19%,
+    rgba(0, 182, 162, 1) 100%
+  );
   font-family: "Source Sans Pro", sans-serif;
 }
