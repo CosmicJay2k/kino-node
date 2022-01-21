@@ -5,6 +5,7 @@ test("show landing page when requested", async () => {
   const response = await request(app).get("/").expect(200);
 });
 
+// This test will fail if the API removes this specific movie
 test("show movies page with movies when requested", async () => {
   const response = await request(app).get("/movies").expect(200);
 
