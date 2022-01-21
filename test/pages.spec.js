@@ -12,8 +12,17 @@ test("show movies page with movies when requested", async () => {
   expect(response.text.includes("Idiocracy")).toBeTruthy();
 });
 
+// This test will fail if the API removes or changes the ID of this specific movie
+// Also pass if any of the Godfather movies are that ID
 test("show right name for movie on that movies page", async () => {
   const response = await request(app).get("/movies/2").expect(200);
 
   expect(response.text.includes("Godfather")).toBeTruthy();
+});
+
+// This test will fail if the API removes or changes the ID of this specific movie
+test("show right name for movie on that movies page", async () => {
+  const response = await request(app).get("/movies/4").expect(200);
+
+  expect(response.text.includes("Batman")).toBeTruthy();
 });
