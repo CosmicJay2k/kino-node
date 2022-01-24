@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 app.use("/movies", moviesRouter);
 
-app.use("/src", express.static("./src"));
+app.use("/public", express.static("./public"));
 
 app.get("/*", (req, res) => {
   res.status(404).render("404");
