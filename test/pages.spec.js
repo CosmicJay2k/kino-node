@@ -3,6 +3,8 @@ import request from "supertest";
 
 test("show landing page when requested", async () => {
   const response = await request(app).get("/").expect(200);
+
+  expect(response.text.includes("<title>Kino Luleå</title>")).toBeTruthy();
 });
 
 // This test will fail if the API removes this specific movie
