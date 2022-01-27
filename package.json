@@ -21,7 +21,7 @@
     "start": "npx sass src/scss/style.scss:public/css/style.css & node .",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "dev": "nodemon .",
-    "w-sass": "npx sass -w src/scss/style.scss src/css/style.css"
+    "w-sass": "npx sass -w src/scss/style.scss public/css/style.css"
   },
   "repository": {
     "type": "git",
